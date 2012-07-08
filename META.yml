@@ -3,6 +3,7 @@ abstract: 'Dist::Zilla like Celogeek'
 author:
   - 'celogeek <me@celogeek.com>'
 build_requires:
+  Carp: 0
   File::Find: 0
   File::Temp: 0
   Module::Build: 0.3601
@@ -19,9 +20,7 @@ meta-spec:
   version: 1.4
 name: Dist-Zilla-PluginBundle-Author-Celogeek
 requires:
-  Carp: 0
   Class::MOP: 0
-  Data::Dumper: 0
   Dist::Zilla::Plugin::AutoPrereqs: 0
   Dist::Zilla::Plugin::CheckChangeLog: 0
   Dist::Zilla::Plugin::Git::NextVersion: 0
@@ -31,6 +30,7 @@ requires:
   Dist::Zilla::Plugin::ModuleBuild: 0
   Dist::Zilla::Plugin::NextRelease: 0
   Dist::Zilla::Plugin::OurPkgVersion: 0
+  Dist::Zilla::Plugin::PerlTidy: 0
   Dist::Zilla::Plugin::PodWeaver: 0
   Dist::Zilla::Plugin::Prepender: 0
   Dist::Zilla::Plugin::Prereqs: 0
@@ -54,7 +54,7 @@ resources:
   bugtracker: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
   homepage: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/wiki
   repository: git://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.3
+version: 0.4
 x_Dist_Zilla:
   plugins:
     -
@@ -201,6 +201,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Run::BeforeRelease
       name: '@Author::Celogeek/Run::BeforeRelease'
       version: 0.013
+    -
+      class: Dist::Zilla::Plugin::PerlTidy
+      name: '@Author::Celogeek/PerlTidy'
+      version: 0.12
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:

@@ -7,6 +7,7 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
+    "Carp" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
     "Module::Build" => "0.3601",
@@ -22,15 +23,13 @@ my %module_build_args = (
     "celogeek <me\@celogeek.com>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Author-Celogeek",
-  "dist_version" => "0.3",
+  "dist_version" => "0.4",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Author::Celogeek",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Carp" => 0,
     "Class::MOP" => 0,
-    "Data::Dumper" => 0,
     "Dist::Zilla::Plugin::AutoPrereqs" => 0,
     "Dist::Zilla::Plugin::CheckChangeLog" => 0,
     "Dist::Zilla::Plugin::Git::NextVersion" => 0,
@@ -40,6 +39,7 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::ModuleBuild" => 0,
     "Dist::Zilla::Plugin::NextRelease" => 0,
     "Dist::Zilla::Plugin::OurPkgVersion" => 0,
+    "Dist::Zilla::Plugin::PerlTidy" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::Prepender" => 0,
     "Dist::Zilla::Plugin::Prereqs" => 0,

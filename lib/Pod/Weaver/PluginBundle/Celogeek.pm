@@ -8,44 +8,44 @@
 #
 package Pod::Weaver::PluginBundle::Celogeek;
 
-
 use strict;
 use warnings;
+
 # ABSTRACT: a bundle that add Bugs section to the Default bundle
-our $VERSION = '0.3'; # VERSION
+our $VERSION = '0.4';    # VERSION
 
 use namespace::autoclean;
 
 use Pod::Weaver::Config::Assembler;
-sub _exp { Pod::Weaver::Config::Assembler->expand_package($_[0]) }
+sub _exp { Pod::Weaver::Config::Assembler->expand_package( $_[0] ) }
 
 sub mvp_bundle_config {
-  return (
-    [ '@Default/CorePrep',  _exp('@CorePrep'), {} ],
-    [ '@Default/Name',      _exp('Name'),      {} ],
-    [ '@Default/Version',   _exp('Version'),   {} ],
+    return (
+        [ '@Default/CorePrep', _exp('@CorePrep'), {} ],
+        [ '@Default/Name',     _exp('Name'),      {} ],
+        [ '@Default/Version',  _exp('Version'),   {} ],
 
-    [ '@Default/prelude',   _exp('Region'),    { region_name => 'prelude'  } ],
-    [ 'SYNOPSIS',           _exp('Generic'),   {} ],
-    [ 'DESCRIPTION',        _exp('Generic'),   {} ],
-    [ 'OVERVIEW',           _exp('Generic'),   {} ],
+        [ '@Default/prelude', _exp('Region'),  { region_name => 'prelude' } ],
+        [ 'SYNOPSIS',         _exp('Generic'), {} ],
+        [ 'DESCRIPTION',      _exp('Generic'), {} ],
+        [ 'OVERVIEW',         _exp('Generic'), {} ],
 
-    [ 'ATTRIBUTES',         _exp('Collect'),   { command => 'attr'   } ],
-    [ 'METHODS',            _exp('Collect'),   { command => 'method' } ],
-    [ 'FUNCTIONS',          _exp('Collect'),   { command => 'func'   } ],
+        [ 'ATTRIBUTES', _exp('Collect'), { command => 'attr' } ],
+        [ 'METHODS',    _exp('Collect'), { command => 'method' } ],
+        [ 'FUNCTIONS',  _exp('Collect'), { command => 'func' } ],
 
-    [ '@Default/Leftovers', _exp('Leftovers'), {} ],
+        [ '@Default/Leftovers', _exp('Leftovers'), {} ],
 
-    [ '@Default/postlude',  _exp('Region'),    { region_name => 'postlude' } ],
+        [   '@Default/postlude', _exp('Region'), { region_name => 'postlude' }
+        ],
 
-    [ '@Default/Bugs'    ,   _exp('Bugs'),   {} ],
-    [ '@Default/Authors',   _exp('Authors'),   {} ],
-    [ '@Default/Legal',     _exp('Legal'),     {} ],
-  )
+        [ '@Default/Bugs',    _exp('Bugs'),    {} ],
+        [ '@Default/Authors', _exp('Authors'), {} ],
+        [ '@Default/Legal',   _exp('Legal'),   {} ],
+    );
 }
 
 1;
-
 
 __END__
 =pod
@@ -56,7 +56,7 @@ Pod::Weaver::PluginBundle::Celogeek - a bundle that add Bugs section to the Defa
 
 =head1 VERSION
 
-version 0.3
+version 0.4
 
 =head1 OVERVIEW
 
