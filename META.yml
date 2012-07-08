@@ -24,6 +24,7 @@ requires:
   Data::Dumper: 0
   Dist::Zilla::Plugin::AutoPrereqs: 0
   Dist::Zilla::Plugin::CheckChangeLog: 0
+  Dist::Zilla::Plugin::Git::NextVersion: 0
   Dist::Zilla::Plugin::MetaConfig: 0
   Dist::Zilla::Plugin::MetaResourcesFromGit: 0
   Dist::Zilla::Plugin::MinimumPerl: 0
@@ -36,9 +37,9 @@ requires:
   Dist::Zilla::Plugin::PruneFiles: 0
   Dist::Zilla::Plugin::ReadmeMarkdownFromPod: 0
   Dist::Zilla::Plugin::ReportVersions: 0
+  Dist::Zilla::Plugin::Run::BeforeRelease: 0
   Dist::Zilla::Plugin::Test::Compile: 0
   Dist::Zilla::Plugin::Test::UnusedVars: 0
-  Dist::Zilla::PluginBundle::Basic: 0
   Dist::Zilla::PluginBundle::Filter: 0
   Dist::Zilla::PluginBundle::Git: 0
   Dist::Zilla::Role::PluginBundle::Easy: 0
@@ -53,9 +54,33 @@ resources:
   bugtracker: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
   homepage: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/wiki
   repository: git://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.2
+version: 0.3
 x_Dist_Zilla:
   plugins:
+    -
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: '@Author::Celogeek/Git::NextVersion'
+      version: 1.121820
+    -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: '@Author::Celogeek/NextRelease'
+      version: 4.300020
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@Author::Celogeek/@Git/Check'
+      version: 1.121820
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@Author::Celogeek/@Git/Commit'
+      version: 1.121820
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@Author::Celogeek/@Git/Tag'
+      version: 1.121820
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@Author::Celogeek/@Git/Push'
+      version: 1.121820
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::Celogeek/@Filter/GatherDir'
@@ -109,22 +134,6 @@ x_Dist_Zilla:
       name: '@Author::Celogeek/@Filter/UploadToCPAN'
       version: 4.300020
     -
-      class: Dist::Zilla::Plugin::Git::Check
-      name: '@Author::Celogeek/@Git/Check'
-      version: 1.121820
-    -
-      class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Author::Celogeek/@Git/Commit'
-      version: 1.121820
-    -
-      class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Author::Celogeek/@Git/Tag'
-      version: 1.121820
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: '@Author::Celogeek/@Git/Push'
-      version: 1.121820
-    -
       class: Dist::Zilla::Plugin::ModuleBuild
       name: '@Author::Celogeek/ModuleBuild'
       version: 4.300020
@@ -136,10 +145,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::OurPkgVersion
       name: '@Author::Celogeek/OurPkgVersion'
       version: 0.004000
-    -
-      class: Dist::Zilla::Plugin::NextRelease
-      name: '@Author::Celogeek/NextRelease'
-      version: 4.300020
     -
       class: Dist::Zilla::Plugin::Prepender
       name: '@Author::Celogeek/Prepender'
@@ -192,6 +197,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@Author::Celogeek/PodWeaver'
       version: 3.101641
+    -
+      class: Dist::Zilla::Plugin::Run::BeforeRelease
+      name: '@Author::Celogeek/Run::BeforeRelease'
+      version: 0.013
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
