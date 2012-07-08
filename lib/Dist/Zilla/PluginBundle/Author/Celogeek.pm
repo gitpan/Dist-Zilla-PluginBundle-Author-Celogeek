@@ -10,12 +10,13 @@ package Dist::Zilla::PluginBundle::Author::Celogeek;
 
 # ABSTRACT: Dist::Zilla like Celogeek
 
+
 use strict;
 use warnings;
 use Carp;
 use Data::Dumper;
 
-our $VERSION = '0.1'; # VERSION
+our $VERSION = '0.2'; # VERSION
 
 use Moose;
 use Class::MOP;
@@ -58,7 +59,35 @@ Dist::Zilla::PluginBundle::Author::Celogeek - Dist::Zilla like Celogeek
 
 =head1 VERSION
 
-version 0.1
+version 0.2
+
+=head1 OVERVIEW
+
+This is the bundle of Celogeek, and is equivalent to create this dist.ini :
+
+  [@Filter]
+  -bundle = @Basic
+  -remove = MakeMaker
+  [@Git]
+  [ModuleBuild]
+  [ReportVersions]
+  [OurPkgVersion]
+  [NextRelease]
+  [Prepender]
+  copyright = 1
+  [AutoPrereqs]
+  [Prereqs]
+  [MinimumPerl]
+  [Test::Compile]
+  [CheckChangeLog]
+  [Test::UnusedVars]
+  [PruneFiles]
+  [ReadmeMarkdownFromPod]
+  [MetaResourcesFromGit]
+  bugtracker.web = https://github.com/%a/%r/issues
+  [MetaConfig]
+  [PodWeaver]
+  config_plugin = @Celogeek
 
 =head1 BUGS
 
