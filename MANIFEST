@@ -11,4 +11,7 @@ lib/Dist/Zilla/PluginBundle/Author/Celogeek.pm
 lib/Pod/Weaver/PluginBundle/Celogeek.pm
 t/00-compile.t
 t/000-report-versions.t
+t/author-critic.t
 t/release-unused-vars.t
+xt/perlcritic.rc
+xt/perltidy.rc

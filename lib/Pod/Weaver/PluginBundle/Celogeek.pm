@@ -12,12 +12,12 @@ use strict;
 use warnings;
 
 # ABSTRACT: a bundle that add Bugs section to the Default bundle
-our $VERSION = '0.4';    # VERSION
+our $VERSION = '0.5';    # VERSION
 
 use namespace::autoclean;
 
 use Pod::Weaver::Config::Assembler;
-sub _exp { Pod::Weaver::Config::Assembler->expand_package( $_[0] ) }
+sub _exp { return Pod::Weaver::Config::Assembler->expand_package( $_[0] ) }
 
 sub mvp_bundle_config {
     return (
@@ -56,7 +56,7 @@ Pod::Weaver::PluginBundle::Celogeek - a bundle that add Bugs section to the Defa
 
 =head1 VERSION
 
-version 0.4
+version 0.5
 
 =head1 OVERVIEW
 
