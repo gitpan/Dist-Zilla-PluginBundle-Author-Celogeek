@@ -1,7 +1,7 @@
-severity = 3
-theme = (pbp || security) && bugs
+severity        = 3
+verbose         = 6
+top             = 50
+theme           = pbp || core || bugs || security || maintenance
 criticism-fatal = 1
-color = 1
-
-[Subroutines::ProtectPrivateSubs]
-allow = Encode::_utf8_on
+color           = 1
+allow-unsafe    = 1

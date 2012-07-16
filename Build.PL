@@ -23,7 +23,7 @@ my %module_build_args = (
     "celogeek <me\@celogeek.com>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Author-Celogeek",
-  "dist_version" => "0.5",
+  "dist_version" => "0.6",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Author::Celogeek",
   "recommends" => {},

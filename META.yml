@@ -56,7 +56,7 @@ resources:
   bugtracker: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
   homepage: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/wiki
   repository: git://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.5
+version: 0.6
 x_Dist_Zilla:
   plugins:
     -
