@@ -13,7 +13,7 @@ package Dist::Zilla::PluginBundle::Author::Celogeek;
 use strict;
 use warnings;
 
-our $VERSION = '0.6';    # VERSION
+our $VERSION = '0.7';    # VERSION
 
 use Moose;
 use Class::MOP;
@@ -96,6 +96,7 @@ sub configure {
         'Test::Compile',
         'CheckChangeLog',
         'Test::UnusedVars',
+        'PodCoverageTests',
         'PruneFiles',
         'ReadmeMarkdownFromPod',
         [   'MetaResourcesFromGit' =>
@@ -122,7 +123,7 @@ Dist::Zilla::PluginBundle::Author::Celogeek - Dist::Zilla like Celogeek
 
 =head1 VERSION
 
-version 0.6
+version 0.7
 
 =head1 OVERVIEW
 
@@ -152,6 +153,7 @@ This is the bundle of Celogeek, and is equivalent to create this dist.ini :
   [Test::Compile]
   [CheckChangeLog]
   [Test::UnusedVars]
+  [PodCoverageTests]
   [PruneFiles]
   [ReadmeMarkdownFromPod]
   [MetaResourcesFromGit]
@@ -165,6 +167,11 @@ This is the bundle of Celogeek, and is equivalent to create this dist.ini :
   perltidyrc = xt/perltidy.rc
   [Test::Perl::Critic]
   critic_config = xt/perlcritic.rc
+
+It also install :
+
+  Devel::Cover
+  Dist::Zilla::App::Command::cover
 
 Here a simple dist.ini :
 
@@ -225,6 +232,16 @@ When you will release, by invoking 'dzil release', it will automatically:
 =item * push origin
 
 =back
+
+=head1 METHODS
+
+=head2 before_build
+
+Setup default config file if your project lack of them
+
+=head2 configure
+
+Configuration of Dist::Zilla::PluginBundle::Easy
 
 =head1 BUGS
 

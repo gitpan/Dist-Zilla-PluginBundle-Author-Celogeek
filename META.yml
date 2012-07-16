@@ -21,6 +21,8 @@ meta-spec:
 name: Dist-Zilla-PluginBundle-Author-Celogeek
 requires:
   Class::MOP: 0
+  Devel::Cover: 0
+  Dist::Zilla::App::Command::cover: 0
   Dist::Zilla::Plugin::AutoPrereqs: 0
   Dist::Zilla::Plugin::CheckChangeLog: 0
   Dist::Zilla::Plugin::Git::NextVersion: 0
@@ -31,6 +33,7 @@ requires:
   Dist::Zilla::Plugin::NextRelease: 0
   Dist::Zilla::Plugin::OurPkgVersion: 0
   Dist::Zilla::Plugin::PerlTidy: 0
+  Dist::Zilla::Plugin::PodCoverageTests: 0
   Dist::Zilla::Plugin::PodWeaver: 0
   Dist::Zilla::Plugin::Prepender: 0
   Dist::Zilla::Plugin::Prereqs: 0
@@ -46,8 +49,10 @@ requires:
   Dist::Zilla::Role::PluginBundle::Easy: 0
   Dist::Zilla::Role::PluginBundle::PluginRemover: 0
   Moose: 0
+  Pod::Coverage::TrustPod: 0
   Pod::Weaver::Config::Assembler: 0
   Test::Perl::Critic: 0
+  Test::Pod::Coverage: 1.08
   namespace::autoclean: 0
   perl: 5.006
   strict: 0
@@ -56,7 +61,7 @@ resources:
   bugtracker: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
   homepage: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/wiki
   repository: git://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.6
+version: 0.7
 x_Dist_Zilla:
   plugins:
     -
@@ -179,6 +184,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Test::UnusedVars
       name: '@Author::Celogeek/Test::UnusedVars'
       version: 2.000003
+    -
+      class: Dist::Zilla::Plugin::PodCoverageTests
+      name: '@Author::Celogeek/PodCoverageTests'
+      version: 4.300020
     -
       class: Dist::Zilla::Plugin::PruneFiles
       name: '@Author::Celogeek/PruneFiles'
