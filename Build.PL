@@ -23,7 +23,7 @@ my %module_build_args = (
     "celogeek <me\@celogeek.com>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Author-Celogeek",
-  "dist_version" => "0.7",
+  "dist_version" => "0.8",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Author::Celogeek",
   "recommends" => {},
@@ -57,6 +57,7 @@ my %module_build_args = (
     "Dist::Zilla::PluginBundle::Git" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Dist::Zilla::Role::PluginBundle::PluginRemover" => 0,
+    "IO::All" => "0.45",
     "Moose" => 0,
     "Pod::Coverage::TrustPod" => 0,
     "Pod::Weaver::Config::Assembler" => 0,

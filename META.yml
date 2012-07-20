@@ -48,6 +48,7 @@ requires:
   Dist::Zilla::PluginBundle::Git: 0
   Dist::Zilla::Role::PluginBundle::Easy: 0
   Dist::Zilla::Role::PluginBundle::PluginRemover: 0
+  IO::All: 0.45
   Moose: 0
   Pod::Coverage::TrustPod: 0
   Pod::Weaver::Config::Assembler: 0
@@ -61,7 +62,7 @@ resources:
   bugtracker: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
   homepage: https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/wiki
   repository: git://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.7
+version: 0.8
 x_Dist_Zilla:
   plugins:
     -

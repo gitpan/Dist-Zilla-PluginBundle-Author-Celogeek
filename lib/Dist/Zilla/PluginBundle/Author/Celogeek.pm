@@ -13,7 +13,7 @@ package Dist::Zilla::PluginBundle::Author::Celogeek;
 use strict;
 use warnings;
 
-our $VERSION = '0.7';    # VERSION
+our $VERSION = '0.8';    # VERSION
 
 use Moose;
 use Class::MOP;
@@ -123,7 +123,7 @@ Dist::Zilla::PluginBundle::Author::Celogeek - Dist::Zilla like Celogeek
 
 =head1 VERSION
 
-version 0.7
+version 0.8
 
 =head1 OVERVIEW
 
