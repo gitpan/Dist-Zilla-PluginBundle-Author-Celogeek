@@ -12,7 +12,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: a bundle that add Bugs section to the Default bundle
-our $VERSION = '0.8';    # VERSION
+our $VERSION = '0.9';    # VERSION
 
 use namespace::autoclean;
 
@@ -52,6 +52,7 @@ sub mvp_bundle_config {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -60,7 +61,7 @@ Pod::Weaver::PluginBundle::Celogeek - a bundle that add Bugs section to the Defa
 
 =head1 VERSION
 
-version 0.8
+version 0.9
 
 =head1 OVERVIEW
 
@@ -100,7 +101,8 @@ Config method for Pod::Weaver
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
+http://tasks.celogeek.com/projects/perl-modules-dist-zilla-pluginbundle-aut
+hor-celogeek
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
@@ -118,4 +120,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

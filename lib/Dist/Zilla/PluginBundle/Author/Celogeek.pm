@@ -13,7 +13,7 @@ package Dist::Zilla::PluginBundle::Author::Celogeek;
 use strict;
 use warnings;
 
-our $VERSION = '0.8';    # VERSION
+our $VERSION = '0.9';    # VERSION
 
 use Moose;
 use Class::MOP;
@@ -115,6 +115,7 @@ sub configure {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -123,7 +124,7 @@ Dist::Zilla::PluginBundle::Author::Celogeek - Dist::Zilla like Celogeek
 
 =head1 VERSION
 
-version 0.8
+version 0.9
 
 =head1 OVERVIEW
 
@@ -246,7 +247,8 @@ Configuration of Dist::Zilla::PluginBundle::Easy
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
+http://tasks.celogeek.com/projects/perl-modules-dist-zilla-pluginbundle-aut
+hor-celogeek
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
@@ -264,4 +266,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
