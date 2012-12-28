@@ -12,7 +12,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: a bundle that add Bugs section to the Default bundle
-our $VERSION = '0.9';    # VERSION
+our $VERSION = '1.0';    # VERSION
 
 use namespace::autoclean;
 
@@ -61,7 +61,7 @@ Pod::Weaver::PluginBundle::Celogeek - a bundle that add Bugs section to the Defa
 
 =head1 VERSION
 
-version 0.9
+version 1.0
 
 =head1 OVERVIEW
 

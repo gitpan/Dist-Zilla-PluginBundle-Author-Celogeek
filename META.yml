@@ -27,6 +27,7 @@ requires:
   Dist::Zilla::Plugin::CheckChangeLog: 0
   Dist::Zilla::Plugin::Git::NextVersion: 0
   Dist::Zilla::Plugin::MetaConfig: 0
+  Dist::Zilla::Plugin::MetaJSON: 0
   Dist::Zilla::Plugin::MetaResourcesFromGit: 0
   Dist::Zilla::Plugin::MinimumPerl: 0
   Dist::Zilla::Plugin::ModuleBuild: 0
@@ -62,7 +63,7 @@ resources:
   bugtracker: http://tasks.celogeek.com/projects/perl-modules-dist-zilla-pluginbundle-author-celogeek
   homepage: https://gitorious.celogeek.com/perl-modules/dist-zilla-pluginbundle-author-celogeek
   repository: git://gitorious.celogeek.com/perl-modules/dist-zilla-pluginbundle-author-celogeek.git
-version: 0.9
+version: 1.0
 x_Dist_Zilla:
   perl:
     version: 5.016002
@@ -70,7 +71,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: '@Author::Celogeek/Git::NextVersion'
-      version: 2.003
+      version: 2.005
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@Author::Celogeek/NextRelease'
@@ -78,19 +79,19 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Author::Celogeek/@Git/Check'
-      version: 2.003
+      version: 2.005
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@Author::Celogeek/@Git/Commit'
-      version: 2.003
+      version: 2.005
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Author::Celogeek/@Git/Tag'
-      version: 2.003
+      version: 2.005
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Author::Celogeek/@Git/Push'
-      version: 2.003
+      version: 2.005
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::Celogeek/@Filter/GatherDir'
@@ -199,6 +200,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::ReadmeMarkdownFromPod
       name: '@Author::Celogeek/ReadmeMarkdownFromPod'
       version: 0.120120
+    -
+      class: Dist::Zilla::Plugin::MetaJSON
+      name: '@Author::Celogeek/MetaJSON'
+      version: 4.300028
     -
       class: Dist::Zilla::Plugin::MetaResourcesFromGit
       name: '@Author::Celogeek/MetaResourcesFromGit'

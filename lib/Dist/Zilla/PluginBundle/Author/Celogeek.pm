@@ -13,7 +13,7 @@ package Dist::Zilla::PluginBundle::Author::Celogeek;
 use strict;
 use warnings;
 
-our $VERSION = '0.9';    # VERSION
+our $VERSION = '1.0';    # VERSION
 
 use Moose;
 use Class::MOP;
@@ -99,6 +99,7 @@ sub configure {
         'PodCoverageTests',
         'PruneFiles',
         'ReadmeMarkdownFromPod',
+        'MetaJSON',
         [   'MetaResourcesFromGit' =>
                 { 'bugtracker.web' => 'https://github.com/%a/%r/issues' }
         ],
@@ -124,7 +125,7 @@ Dist::Zilla::PluginBundle::Author::Celogeek - Dist::Zilla like Celogeek
 
 =head1 VERSION
 
-version 0.9
+version 1.0
 
 =head1 OVERVIEW
 
@@ -157,6 +158,7 @@ This is the bundle of Celogeek, and is equivalent to create this dist.ini :
   [PodCoverageTests]
   [PruneFiles]
   [ReadmeMarkdownFromPod]
+  [MetaJSON]
   [MetaResourcesFromGit]
   bugtracker.web = https://github.com/%a/%r/issues
   [MetaConfig]
