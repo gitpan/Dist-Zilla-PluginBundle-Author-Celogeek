@@ -1,7 +1,7 @@
 #
 # This file is part of Dist-Zilla-PluginBundle-Author-Celogeek
 #
-# This software is copyright (c) 2011 by celogeek <me@celogeek.com>.
+# This software is copyright (c) 2014 by celogeek <me@celogeek.com>.
 #
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
@@ -12,7 +12,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: a bundle that add Bugs section to the Default bundle
-our $VERSION = '1.0';    # VERSION
+our $VERSION = '1.1';    # VERSION
 
 use namespace::autoclean;
 
@@ -61,7 +61,7 @@ Pod::Weaver::PluginBundle::Celogeek - a bundle that add Bugs section to the Defa
 
 =head1 VERSION
 
-version 1.0
+version 1.1
 
 =head1 OVERVIEW
 
@@ -101,8 +101,7 @@ Config method for Pod::Weaver
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-http://tasks.celogeek.com/projects/perl-modules-dist-zilla-pluginbundle-aut
-hor-celogeek
+https://github.com/celogeek/dist-zilla-pluginbundle-author-celogeek/issues
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
@@ -114,7 +113,7 @@ celogeek <me@celogeek.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by celogeek <me@celogeek.com>.
+This software is copyright (c) 2014 by celogeek <me@celogeek.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
